@@ -1,0 +1,28 @@
+
+
+h2 {
+
+    color: palevioletred;
+    background-color: #f0f0f5;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+td{
+
+    color: black;
+    background-color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 40px;
+    
+}
+th{
+
+    color: palevioletred;
+    background-color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+    
+}

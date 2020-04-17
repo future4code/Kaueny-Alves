@@ -1,0 +1,49 @@
+
+
+    
+    
+  span{
+    text-align: right;
+  }  
+
+    
+  #menu ul li {
+    
+    padding: 5px; 
+    display: inline-block;
+    background-color: white;
+    color: black;
+    margin: 0px;
+    list-style: none;
+    font-family: arial;
+    
+  }
+  
+  h1 {
+
+    text-align: center;
+    color: black;
+    padding: px;
+  }
+   
+  h4 {
+    text-align: center;
+    color: palevioletred;
+    padding: 0px;
+  }
+
+  div#rodape ul {
+
+    text-align: center;
+    
+
+  }
+
+  div#rodape{
+    background-color: #f0f0f5;
+    text-align: center;
+    Position: relative;
+    Top: 300px;
+    padding: 20px;
+    font-size: 10px;
+  }
