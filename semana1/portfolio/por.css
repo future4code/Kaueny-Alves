@@ -1,0 +1,61 @@
+body{
+    margin: 0px 0px;
+    background-color:white;
+    
+     
+}
+
+
+header{
+    padding: 1px 20px 0px ;
+    
+    color: black;
+    font-size: 25px;
+    font-family: cursive;
+    text-align: left;
+    
+}
+
+
+
+figure {
+
+    float: right;
+   overflow: hidden;
+    border: 10px;
+
+}
+
+p{
+
+    font-size: 20px;
+}
+
+.projeto {
+
+    text-decoration-color: none;}
+    
+
+div {
+    font-family: Arial ;
+    display: block;
+    font-size: 20px;
+    text-align:left;
+    color: rgb(128, 128, 128);
+    padding: 1px 20px;
+    font-size: 15px;
+    
+}
+
+
+
+#rodape {
+
+   
+    text-align: center;
+    position: relative;
+    Top: 10px;
+    padding: 800px  200px;
+    font-size: 25px;
+    color: black;
+}
