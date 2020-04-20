@@ -35,11 +35,14 @@ td{
 
 div>p:first-child {
     display: inline;
+   
     
 }
 
 div img {
-    background: black;
+    background: white;
+    width: 50px;
+   
 }
 
 .botao-amarelo {
