@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+video{
+    max-width: 100%;
+    display: block;
+}
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    margin: 0px;
+   
+    
+}
+
+.flex > div {
+    flex: 1 1 400px;
+    margin: 20px 20px;
+    
+}
+
+
+footer{
+   
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    text-align: center;
+}
+
