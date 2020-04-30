@@ -23,7 +23,7 @@ Leia o código abaixo:
 
 const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
 const novaLista = []
-const numero = 4
+const numero = 5
 for(const item of lista) {
   if(item%numero === 0) {
     novaLista.push(item)
@@ -33,7 +33,7 @@ console.log(novaLista)
 
 
 a. O que o comando `.push` faz?
-O comando push acrescenta um novo item na array.
+O comando push empurra para novaLista todos os numeros que dividido por 5 não tem sobra, ou a sobra é igual a 0.
 b. Qual o valor impresso no console?
 (4) [10, 15, 25, 30]
 c. Qual **seria** imprimido no console se a variável `numero` tivesse o valor de `3`? 
@@ -43,16 +43,15 @@ E se tivesse o valor de `4`?
 
 
 
-
-**Exercícios de escrita de código**
+Exercícios de escrita de código
 
 EXERCÍCIO 3
-
 Nas perguntas abaixo, considere que você tenha acesso a um `array`  (chamado de 'array original') 
 que seja composto somente de números.
  Após o enunciado, há um exemplo de qual deve ser a resposta final de cada programa individualmente.
 
 a. Escreva um programa que devolva o maior e o menor números contidos no array original
+
 const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 let maxNumeroAtual = array[0]
 let minNumeroAtual = array[0] 
@@ -67,20 +66,48 @@ for (let numero of array) {
 
 console.log("O maior número é" + " " + maxNumeroAtual + " " + "e o menor é" +" " + minNumeroAtual )
 
-b. Escreva um programa que devolva um novo array contendo 
-todos os valores do array original divididos por 10.
-*/
-
-
-const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-
-
-
 
 /*
+b. Escreva um programa que devolva um novo array contendo 
+todos os valores do array original divididos por 10.
+
+
+const lista = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const novaLista = []
+let numeroDividido = 0
+	
+	for (const item of lista) {
+	    numeroDividido = item/10
+	    novaLista.push(numeroDividido)
+	  }
+  console.log(novaLista)
+
 c. Escreva um programa que devolva um novo array contendo, somente, os números pares do array original.
 
+const lista = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const novaLista = []
+
+    
+    for (const item of lista) {
+       if ( item%2 === 0 ){
+        novaLista.push(item)
+      }
+    }
+  console.log(novaLista)
+
 d. Escreva um programa que gere um novo array contendo strings, da seguinte forma: "O elemento do índex i é: numero"
+
+
+const lista = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const novaLista = []
+let i = 0
+
+  for (const item of lista){
+    novaLista.push ("O elemento do index " + i + " " + "é " +  item)
+     i++
+    }
+    console.log (novaLista)
+
 
 Exemplos do que o código tem que fazer em cada item:
 
