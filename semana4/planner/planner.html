@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="planner.js" defer></script>
+  <link href="planner.css" type="text/css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Planner</h1>
+  </header>
+
+  <div class="botao">
+
+    <input type="text">
+    <select name="diaDaSemana" id="diaDaSemana">
+      <option value="segunda">Segunda</option>
+      <option value="terca">Terça</option>
+      <option value="quarta">Quarta</option>
+      <option value="quinta">Quinta</option>
+      <option value="sexta">Sexta</option>
+      <option value="sabado">Sabado</option>
+      <option value="domingo">Domingo</option>
+    </select>
+    <button onclick="adicionarItem()">Criar Tarefa</button>
+
+  </div>
+
+  <section id="container">
+
+    <div>
+      <p>Segunda</p>
+      <ul id="segunda"></ul>
+    </div>
+    
+    <div>
+      <p>Terca</p>
+      <ul id="terca"></ul>
+    </div>
+
+    <div>
+      <p>Quarta</p>
+      <ul id="quarta"></ul>
+    </div>
+
+
+    <div>
+      <p>Quinta</p>
+      <ul id="quinta"></ul>
+    </div>
+
+    <div>
+      <p>Sexta</p>
+     <ul id="sexta"></ul>
+    </div>
+
+    <div>
+      <p>Sábado</p>
+      <ul id="sabado"></ul>
+    </div>
+
+    <div>
+      <p>Domingo</p>
+      <ul id="domingo"></ul>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
