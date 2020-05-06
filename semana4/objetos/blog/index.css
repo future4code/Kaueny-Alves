@@ -1,0 +1,41 @@
+*{
+
+    font-size: 18px;
+    font-family: arial;
+}
+
+section{
+    display:flex;
+    justify-content: center;
+}
+
+div{
+    width: 800px;
+    height: 800px;
+}
+
+h1{
+    text-align: center;
+    
+}
+
+form{
+display: flex;
+flex-direction: column;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+textarea{
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    
+}
