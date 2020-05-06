@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="planner.js" defer></script>
-    <link href="planner.css" type="text/css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body>
 
-    <header>
-      <h1>Planner </h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="planner.js" defer></script>
+  <link href="planner.css" type="text/css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Planner</h1>
+  </header>
+
+  <div class="botao">
+
+    <input type="text">
+    <select name="diaDaSemana" id="diaDaSemana">
+      <option value="segunda">Segunda</option>
+      <option value="terca">Terça</option>
+      <option value="quarta">Quarta</option>
+      <option value="quinta">Quinta</option>
+      <option value="sexta">Sexta</option>
+      <option value="sabado">Sabado</option>
+      <option value="domingo">Domingo</option>
+    </select>
+    <button onclick="adicionarItem()">Criar Tarefa</button>
+
+  </div>
+
+  <section id="container">
 
     <div>
-
-      <input type="text">
-      <select name="diaDaSemana" id="diaDaSemana">
-        <option value="segunda">Segunda</option>
-        <option value="terca">Terça</option>
-        <option value="quarta">Quarta</option>
-        <option value="quinta">Quinta</option>
-        <option value="sexta">Sexta</option>
-        <option value="sabado">Sabado</option>
-        <option value="domingo">Domingo</option>
-      </select>
-      <button onclick="adicionarItem()">Criar Item</button>
-  
+      <p>Segunda</p>
+      <ul id="segunda"></ul>
+    </div>
     
+    <div>
+      <p>Terca</p>
+      <ul id="terca"></ul>
     </div>
 
-    <section id="container">
-
-      <p>Segunda</p>   
-      
-      <ul id="segunda">
-  
-      </ul>
-
-      <p>Terca</p>
-
-      <ul id="terca">
-  
-      </ul>
-
+    <div>
       <p>Quarta</p>
+      <ul id="quarta"></ul>
+    </div>
 
-      <ul  id="quarta">
-  
-      </ul>
 
-      <p id="quinta">Quinta</p>
+    <div>
+      <p>Quinta</p>
+      <ul id="quinta"></ul>
+    </div>
 
-      <ul>
-  
-      </ul>
+    <div>
+      <p>Sexta</p>
+     <ul id="sexta"></ul>
+    </div>
 
-      <p id="sexta">Sexta</p>
+    <div>
+      <p>Sábado</p>
+      <ul id="sabado"></ul>
+    </div>
 
-      <ul>
-  
-      </ul>
+    <div>
+      <p>Domingo</p>
+      <ul id="domingo"></ul>
+    </div>
 
-      <p id="sabado">Sábado</p>
+  </section>
 
-      <ul>
-  
-      </ul>
+</body>
 
-      <p id="domingo">Domingo</p>
-
-      <ul>
-  
-      </ul>
-      
-    </section>
-  
-  </body>
-  </html>
-       
-        
-       
-        
-      
-        
-    
-        
-        
-        
-        
-   
+</html>

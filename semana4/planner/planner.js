@@ -1,22 +1,70 @@
 function adicionarItem() {
-    const input = document.querySelector("input")
-    const novoItem = input.value
+    let input = document.querySelector("input")
+    let novoItem = input.value
 
-    const diaDaSemana = document.querySelector("#diaDaSemana").value
-     
 
-    console.log(diaDaSemanas)
+    const diaSelecionado = document.getElementById("diaDaSemana").selectedIndex
+    console.log(diaSelecionado);
 
-    if(novoItem === ""){
+    if (novoItem === "") {
         alert("Insira um item!!!")
     } else {
- 
-        const listaDeCompras = document.querySelector("#terca")
-        const listaDeComprasUl = document.querySelector("ul")
-        listaDeCompras.innerHTML += "<li>" + novoItem + "</li>"
-        input.value = ""
-    
-    
-    
+
+        let listaDeTarefas = ""
+        
+
+        switch (diaSelecionado) {
+
+            case 0:
+
+                listaDeTarefas = document.getElementById("segunda")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 1:
+
+                listaDeTarefas = document.getElementById("terca")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 2:
+
+                listaDeTarefas = document.getElementById("quarta")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 3:
+
+                listaDeTarefas = document.getElementById("quinta")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 4:
+
+                listaDeTarefas = document.getElementById("sexta")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 5:
+
+                listaDeTarefas = document.getElementById("sabado")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+            case 6:
+
+                listaDeTarefas = document.getElementById("domingo")
+                listaDeTarefas.innerHTML += "<li>" + novoItem + "</li>"
+                input.value = ""
+                break
+
+        }
+
     }
 }
