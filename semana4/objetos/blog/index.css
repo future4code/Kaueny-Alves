@@ -1,0 +1,50 @@
+
+section{
+    display:flex;
+    justify-content: center;
+}
+
+#divFormulario{
+    width: 500px;
+    height: 500px;
+}
+
+#titulo{
+    
+}
+
+h1{
+    text-align: center;
+    
+}
+
+form{
+display: flex;
+flex-direction: column;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+textarea{
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30;
+    font-family: cursive;
+    
+}
