@@ -34,3 +34,40 @@
 //  1590
 
 
+
+
+//Exercicios de Função
+
+//exercicio 1 
+//Escreva uma função que receba um `array` de números e imprima na tela o segundo maior e o segundo menor número.
+// Em seguida, invoque essa função.
+
+/*
+let listaNumeros = [01,10,09,04,15,02]
+
+ listaNumeros.sort(function(a,b){
+    return a - b 
+})
+
+function lista () { 
+    console.log (listaNumeros)
+    let segundoMaior = listaNumeros.length-2
+   console.log( "Esse é o segundo menor numero: " + listaNumeros[1])
+   console.log( "Esse é o segundo maior numero: " + listaNumeros[segundoMaior])
+}
+
+    lista()
+*/
+
+
+//exercicio 2
+//Escreva uma **função não nomeada** que faça um `alert("Hello Future4");`.
+// Em seguida, invoque essa função.
+
+/*
+let saudacao = () =>  alert("Hello Labenu")
+
+saudacao()
+*/
+
+
