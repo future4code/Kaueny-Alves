@@ -377,3 +377,24 @@ numerosParImpar = array.map(function(item){
 
 console.log (numerosParImpar)
 */
+
+//A regra para entrar na montanha russa do terror é: ter, no mínimo, 1.5m de altura; 
+//ser mais velho do que 14 anos e mais novo do que 60 anos.
+/*
+const pessoas = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+
+let pessoasAutorizadas = pessoas.filter(function(item){
+
+    if(item.idade > 14 && item.idade <60 && item.altura >= 1.5)
+    return true
+
+})
+console.log (pessoasAutorizadas)
+*/
