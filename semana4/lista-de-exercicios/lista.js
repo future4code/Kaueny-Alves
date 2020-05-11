@@ -199,3 +199,82 @@ triangulo (0,3,1)
 // i. indique qual é o maior,
 // ii. determine se eles são divisíveis um pelo outro (use o operador `%`) e
 // iii. determine a diferença entre eles (o resultado deve ser um número positivo sempre)
+
+
+
+//Exercícios de Objetos
+
+//1. Explique com as suas palavras o que são e quando podemos/devemos utilizar arrays e objetos.
+//R-Objetos é uma forma para armazenar varias propriedades de um item, 
+//que é uma função nomeada, diferente do Array que eu aramazeno os itens, que é uma funçao numerada.
+//Eu uso objetos quando eu quero armazenar um item com seus valore, e arrays quando eu vou receber os itens.
+
+
+//2. Crie uma função chamada `criaRetangulo` que recebe como parâmetros dois lados (`lado1` e `lado2`) 
+//e retorna um objeto com 4 informações: largura (`lado1`), altura (`lado2`), perímetro 
+//(`2 * (lado1 + lado2)`) e área (`lado1 * lado2`).
+
+/*
+function criaRetangulo (lado1,lado2) {
+
+    let retangulo = {
+        largura: lado1,
+        altura: lado2,
+        perímetro: 2*(lado1+lado2),
+        area: lado1*lado2,
+
+    }
+
+    return console.log(retangulo)
+
+}
+criaRetangulo(15,20)
+*/
+
+
+//3. Crie um objeto para representar seu filme favorito. Ele deve ter as seguintes propriedades:
+// título, ano, diretor e atores/atrizes (lista com pelo menos 2 atores/atrizes).
+//  Imprima na tela a seguinte string, baseada nos valores do objeto:
+//`Venha assistir ao filme NOME DO FILME, de ANO, dirigido por DIRETOR e estrelado por 
+//ATOR 1, ATRIZ 2, ATOR n`. A lista de atores/atrizes deve ser impressa inteira,
+// independente do tamanho da lista.
+/*
+let filmeFavorito = {
+    titulo: "Até o último Homem",
+    ano: "2017",
+    diretor: "Mel Gibson",
+    atores:[ "Andrew Garfield", " Teresa Palmer" , " Vince Vaughn"]
+}
+
+console.log ("Venha assistir ao filme " + filmeFavorito.titulo+ " de ano " + filmeFavorito.ano+  " dirigido por " +filmeFavorito.diretor+ " e estrelado por " + filmeFavorito.atores+ ".")
+*/
+
+
+//4. Crie um objeto que represente uma pessoa qualquer, com as propriedades de 
+//nome, idade, email e endereco. Crie uma função chamada `anonimizarPessoa`, 
+//que deverá retornar um **novo** objeto com as mesmas propriedades, mas com a string 
+//ANÔNIMO no lugar do nome. O objeto original deve ser mantido com o nome da pessoa.
+/*
+let pessoa = {
+    nome: "Gabriela",
+    idade: 25,
+    email: "gabriela@hotmail.com",
+    endereco: "Rua sete, n-2 centro-SP"
+
+}
+
+function anonimarPessoa (){
+    
+    let nomeOculto = {
+        nome: "Anonimo",
+        idade: pessoa.idade,
+        email: pessoa.email,
+        endereco: pessoa.endereco,
+
+    }
+
+    return console.log(nomeOculto)
+    
+}
+anonimarPessoa()
+*/
