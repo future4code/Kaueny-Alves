@@ -1,12 +1,12 @@
 import React from 'react'
 import './IconeComContador.css'
 
-export class IconeComContador extends React.Component {
-	render()
+export function IconeComContador(props) {
+	console.log (props.valorContador)
+	return <div className={'icon-container'}>
+		<img alt={'Icone'} src={props.icone} onClick={props.onClickIcone}/>
+		<p>{props.valorContador}</p>
 
+	</div>
 	
-	{return <div className={'icon-container'}>
-		<img alt={'Icone'} src={this.props.icone} onClick={this.props.onClickIcone}/>
-		<p>{this.props.valorContador}</p>
-	</div>}
 }
