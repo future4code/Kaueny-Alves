@@ -28,7 +28,38 @@ class App extends React.Component {
         fotoUsuario: Ma,
         fotoPost: Marley,
       },
-    ]
+    ],
+
+    valorInputNomeUsuario:" ", 
+    valorInputFotoUsuario:" ",
+    valorInputFotoPost:" ",
+
+  };
+
+    adicionaPost = () => {
+
+      const novoPost = {
+
+        nome: this.state.valorInputNomeUsuario,
+        fotoUsuario: this.state.valorInputFotoUsuario,
+        fotoPost: this.state.valorInputFotoPost,
+
+    }
+
+      const novosPosts = {...this.state.Post, novoPost};
+
+        this.setState({
+
+          Post: novosPosts,
+          valorInputNomeUsuario: " ",
+          valorInputFotoUsuario: " ",
+          valorInputFotoPost: " ",
+
+    });
+
+   
+
+
   }
 
   render() {
@@ -45,12 +76,38 @@ class App extends React.Component {
 
     return (
       <div className={'app-container'}>
-       {listaDePosts}
+        <div>
+        <input 
+          value={this.state.valorInputNomeUsuario}
+          onChange={this.onChangeInputNomeUsuario}
+          placeholder={"Nome Usuário"}
+        />
 
+        <input 
+          value={this.state.valorInputFotoUsuario}
+          onChange={this.onChangeInputFotoUsuari}
+          placeholder={"Url Foto Usuário"}
+        />
+
+        <input 
+          value={this.state.valorInputFotoPost}
+          onChange={this.onChangeInputFotoPost}
+          placeholder={"Url Foto Post"}
+        />
+
+        <button onClick={this.novosPosts}>Adicionar</button>
+        </div>
+
+        <div>{listaDePosts}</div>
+       
       </div>
     );
   }
 }
+
+    
+
+
 
 export default App;
 
