@@ -1,7 +1,50 @@
 import React from "react";
 import axios from "axios";
+import styled from "styled-components";
 
+const Container = styled.div`
+   border: 1px solid black;
+   margin: 100px;
+   padding: 20px;
+   max-height: 300px;
+   max-width: 200px;
+   color: gray;
+  
+`;
 
+const Button = styled.button`
+  margin: 0 auto;
+  background-color: hsl(296, 62%, 26%);
+  color: white;
+  border: none;
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    width: 1.25em;
+    transform: translate3d(-525%, 0, 0) rotate(35deg);
+  }
+
+  &:hover::after {
+    transition: transform 0.45s ease-in-out;
+    transform: translate3d(200%, 0, 0) rotate(35deg);
+  }
+`;
 
 class SignUpPage extends React.Component{
 
@@ -45,26 +88,27 @@ class SignUpPage extends React.Component{
       });
   };
         
-    
 
     render(){
         return(
-            <div>
+            <Container>
+                <h3>Nome:</h3>
                 <input 
                     type="text"
-                    placeholder="name"
                     value={this.state.name}
                     onChange={this.handleNameChange}
                 />
+                <h3>Email:</h3>
                 <input 
                     type="email"
-                    placeholder="email"
                     value={this.state.email}
                     onChange={this.handleEmailChange}
                 />
-                <button onClick={this.handleCreateUser}>Criar Usuário</button>
+                <br />
+                <br />
+                <Button onClick={this.handleCreateUser}>Criar Usuário</Button>
 
-            </div>
+            </Container>
         )
     
 }
