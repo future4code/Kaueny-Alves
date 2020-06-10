@@ -1,8 +1,10 @@
+
 import React, {Component} from 'react'
 import './SecaoComentario.css'
 
 export class SecaoComentario extends Component {
 	state = {
+
 		Comentario: " ",
 	}
 
@@ -23,4 +25,5 @@ export class SecaoComentario extends Component {
 		  </div>
 	  }
   }
+
 
