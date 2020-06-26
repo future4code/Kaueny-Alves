@@ -5,6 +5,7 @@ import CreateTripPage from '../ProtectedPages/CreateTripPage';
 import LoginPage from '../homepage/LoginPage';
 import ListTripPage from '../Trips/ListTripsPage';
 import TripDetailsPage from '../ProtectedPages/TripDetailsPage';
+import AplicationForm from '../Trips/AplicationForm';
   
 
 function Router() {
@@ -25,6 +26,9 @@ function Router() {
         </Route>
         <Route exact path="/TripDetailsPage">
           <TripDetailsPage/>
+        </Route>
+        <Route exact path="/AplicationForm">
+          <AplicationForm/>
         </Route>
         <Route path="/">
           <div>Opa! 404!</div>

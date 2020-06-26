@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from './Components/Routers/Router';
+import { Footer } from '../src/Components/homepage/Footer';
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <div >
       <Router/>
-      </div>
+      <Footer/>
+    </div>
   );
 }
 

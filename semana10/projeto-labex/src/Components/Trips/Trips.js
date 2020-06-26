@@ -1,11 +1,14 @@
 import React from 'react';
- import styled from 'styled-components';
+import styled from 'styled-components';
+import Typography  from '@material-ui/core/Typography'
+
 
  const ListItemContainer = styled.div`
      display: flex;
      flex-direction:column;
      align-items: center;
      padding: 10px;
+     
 
  `;
 
@@ -15,11 +18,11 @@ import React from 'react';
      return(
      <ListItemContainer>
       
-      <p>NAME: {trips.name}</p>
-      <p>DESCRIPTION: {trips.description}</p>
-      <p>PLANET: {trips.planet}</p>
-      <p>DURATION: {trips.durationInDays}</p>
-      <p>DATE: {trips.date}</p>
+      <Typography><strong>Name:</strong> {trips.name}</Typography>
+      <Typography><strong>Description:</strong> {trips.description}</Typography>
+      <Typography><strong>Planet:</strong> {trips.planet}</Typography>
+      <Typography><strong>Duration: </strong>{trips.durationInDays}</Typography>
+      <Typography><strong>Date: </strong>{trips.date}</Typography>
 
      </ListItemContainer>)
  }
