@@ -1,39 +1,43 @@
 import React from 'react';
 import {Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from '../homepage/HomePage';
-import CreateTripPage from '../ProtectedPages/CreateTripPage';
+import CreateTripPage from '../Trips/CreateTripPage';
 import LoginPage from '../homepage/LoginPage';
 import ListTripPage from '../Trips/ListTripsPage';
-import TripDetailsPage from '../ProtectedPages/TripDetailsPage';
+import TripDetailsPage from '../Trips/TripDetailsPage';
 import AplicationForm from '../Trips/AplicationForm';
+import Header from '../homepage/Header';
+import { Footer } from '../homepage/Footer';
   
 
 function Router() {
   return (
     <BrowserRouter>
+    <Header/>
       <Switch>
         <Route exact path="/">
           <HomePage/>
         </Route>
-        <Route exact path="/CreateTripPage">
+        <Route path="/CreateTripPage">
           <CreateTripPage/>
         </Route>
-        <Route exact path="/LoginPage">
+        <Route  path="/LoginPage">
           <LoginPage/>
         </Route>
-        <Route exact path="/ListTripPage">
+        <Route path="/ListTripPage">
           <ListTripPage/>
         </Route>
-        <Route exact path="/TripDetailsPage">
+        <Route  path="/TripDetailsPage">
           <TripDetailsPage/>
         </Route>
-        <Route exact path="/AplicationForm">
+        <Route  path="/AplicationForm">
           <AplicationForm/>
         </Route>
         <Route path="/">
           <div>Opa! 404!</div>
         </Route>
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -2,19 +2,15 @@ import React, { useEffect, useState } from 'react';import axios from 'axios';
 import Trips from '../Trips/Trips'
 import { Card } from '@material-ui/core';
 import styled from 'styled-components';
-import Header from '../homepage/Header';
 import {useHistory} from 'react-router-dom'
 
 
- const ListItemContainer = styled.div`
+ const ListItemContainer = styled(Card)`
      display: flex;
      flex-direction:column;
      align-items: center;
      padding: 10px;
-     border: 1px solid black;
-     border-radius:1px;
      margin: 30px;
-
  `;
 
 function ListTripPage() {
@@ -45,8 +41,7 @@ function ListTripPage() {
 
 
   return (
-    <Card >
-      <Header/>
+    < >      
        {trips.map(trip=>{
            return<ListItemContainer>
            <img src="https://picsum.photos/100/100" alt="fotos planetas"/>
@@ -57,7 +52,8 @@ function ListTripPage() {
                  </ListItemContainer>
          })}
            
-    </Card>
+    
+    </>
   );
 }
 

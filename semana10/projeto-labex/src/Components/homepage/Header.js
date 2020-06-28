@@ -31,6 +31,10 @@ function Header() {
     history.push("/TripDetailsPage")
   }
 
+  const goToHome = ()=>{
+    history.push("/")
+  }
+
   
   return (
     <div className={classes.root}>
@@ -39,6 +43,7 @@ function Header() {
             <Button color="inherit" onClick={goCreateTripsPage}>Criar viagens</Button>
             <Button color="inherit" onClick={goTripDetailsPage}>Detalhes das viagens</Button>
             <Button color="inherit" onClick={goToLoginPage}>Login</Button>
+            <Button color="inherit" onClick={goToHome}>Home</Button>
           </Toolbar>
         </AppBar>
    </div>

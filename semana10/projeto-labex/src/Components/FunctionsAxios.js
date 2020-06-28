@@ -13,12 +13,3 @@ import axios from 'axios';
   console.log(response)
  };
 
- 
-
-useEffect(()=>{
-  const token = window.localStorage.getItem("token")
-
-  if(token !== null){
-    history.push('/CreateTripPage')
-  }
- },[history])

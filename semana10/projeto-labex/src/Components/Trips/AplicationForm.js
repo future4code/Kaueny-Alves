@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components'
-import Header from '../homepage/Header';
+import axios from 'axios';
 
 const FormContainer = styled.form`
      display: flex;
@@ -12,24 +12,39 @@ const FormContainer = styled.form`
      margin: 30px;
      width: 500px;
      height: 500px;
-
  `;
+ const baseUrl = 'https://us-central1-labenu-apis.cloudfunctions.net/labeX/kaueny-mello'
 
-function AplicationForm() {
-  const [form, setForm] = useState({name:"",age:"",})
+function AplicationForm(props) {
+  const trips = props.trips
+  const [form, setForm] = useState({})
     
-    const onChange = (name, value) => {
+    const onChange = (event) => {
+      const {name,value} = event.target
         const newForm = {
             ...form,[name]: value
         }
         setForm(newForm)
-        console.log(name.value)
+        console.log(event.target)
     }
+    const Aplication = async (event) => {
+      event.preventDefaul()
+      try {
+      const response = await axios.post (`${baseUrl}/trips/${trips.id}/apply`)
+        console.log(response)
+        alert("Voce esta inscrito")
+      } catch(error){
+        console.log(error)
+        alert("Voce não esta inscrito")
+      }
+    }
+
+
 
   return (
     <>
-    <Header/>
-     <FormContainer >
+    
+     <FormContainer>
         <label forHtml="name">Nome</label>
         <input name="name" value={form.name} type="text" onChange={onChange}/>
         
@@ -45,8 +60,9 @@ function AplicationForm() {
         <label forHtml="country">País</label>
         <input name="country" value={form.country} type=""onChange={onChange}/>
         
-        <button >Candidate-se</button>
+        <button onClick={Aplication}>Candidate-se</button>
       </FormContainer>
+      
       </>
   );
 }
