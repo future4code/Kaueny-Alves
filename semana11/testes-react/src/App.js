@@ -8,6 +8,7 @@ const App = () => {
 
   const onChangeInput = event => {
     setInputValue(event.target.value);
+    
   };
 
   const addPost = () => {
@@ -21,6 +22,7 @@ const App = () => {
     const newPostsList = [newPost, ...postsList];
 
     setPostsList(newPostsList);
+    setInputValue("")
   };
 
   const deletePost = postId => {
