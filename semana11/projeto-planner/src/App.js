@@ -1,5 +1,5 @@
 import React from 'react';
-import Planner from './Components/PlannerPage';
+import Planner from './PlannerPage';
 
 
 function App() {

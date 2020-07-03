@@ -34,55 +34,55 @@ const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/generic/plan
 
 function Planner() {
 
-  const [dia, setDia] = useState()
-  const [task,setTask] = useState()
+  const [task,setTask] = useState([])
+  const [text, setText] = useState()
+  const [day, setDay] = useState()
 
-  /*const [form, setForm] = useState({})
-
-     const onChange = (name, value) => {
-     const onChange = (event) => {
-       const {name,value} = event.target
-         const newForm = {
-             ...form,[name]: value
-         }
-         setForm(newForm)
-         console.log(name.value)
-         console.log(event.target)
-     }*/
+  const handleInput =(event)=>{
+    setText(event.target.value)
+    console.log(event.target.value)
+  }
+  const handleISelect =(event)=>{
+    setDay(event.target.value)
+    console.log(event.target.value)
+  }
+  
 
   useEffect(()=>{
     getTasks()
-  },[setDia,setTask])
+  },[])
 
   const getTasks = ()=>{
     axios.get(baseUrl)
-    .then(response=>{
+     .then(response=>{
       console.log(response.data)
     }).catch(error=>{
       console.log(error)
     })
   };
 
-  const createTask = ()=>{
+  const createTask = (event)=>{
+    event.preventDefault()
     const body = {
-      text: "Lavar a louça",
-      day: "Segunda"
+      text: text,
+       day:day,
     }
     axios.post(baseUrl,body).then(response =>{
       console.log(response.data)
+      setTask(response.data)
     }).catch(error=>{
       console.log(error)
     })
-  }
-
+   }
+  
   const deleteTask = ()=>{
   
-    axios.post(baseUrl/task.id).then(response =>{
+      axios.post(baseUrl/task.id).then(response =>{
       console.log(response.data)
     }).catch(error=>{
-      console.log(error)
-    })
-  }
+          console.log(error)
+  })
+}
 
 
 
@@ -90,20 +90,19 @@ function Planner() {
   return (
     <div>
      <AppBar>Planner</AppBar>
-     <div>
-        
-        <input type="text" placeholder="Tarefas"/>
-        <select name="diaDaSemana">
-            <option name="segunda" value="segunda">Segunda</option>
-            <option name="terca" value="terca">Terça</option>
-            <option name="quarta" value="quarta">Quarta</option>
-            <option name="quinta" value="quinta">Quinta</option>
-            <option name="sexta" value="sexta">Sexta</option>
-            <option name="sabado" value="sabado">Sabado</option>
-            <option name="domingo" value="domingo">Domingo</option>
+     <form>
+        <input onChange={handleInput} value={text} type="text" placeholder="Tarefas"/>
+        <select onChange={handleISelect} name="diaDaSemana">
+            <option  value="segunda" >Segunda</option>
+            <option  value="terca" >Terça</option>
+            <option  value="quarta" >Quarta</option>
+            <option  value="quinta" >Quinta</option>
+            <option  value="sexta" >Sexta</option>
+            <option  value="sabado" >Sabado</option>
+            <option  value="domingo" >Domingo</option>
          </select>
         <button onClick={createTask}>Criar Tarefa</button>
-     </div>
+     </form>
 
 
 
@@ -111,7 +110,7 @@ function Planner() {
 
   <Days>
     <p>Segunda</p>
-    <ul></ul>
+  <ul>{task}</ul>
   </Days>
   
   <Days>
