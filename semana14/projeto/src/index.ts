@@ -20,14 +20,3 @@ export function writeToDatabase(data: any): void {
 }
 
 
-type user = {
-  name: string,
-  cpf: number,
-  dateNasc: number,
-}
-
-const conta: user = {
-  name: "Kaka",
-  cpf: 30099988882,
-  dateNasc: 3 / 5 / 88,
-}

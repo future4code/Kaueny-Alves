@@ -11,18 +11,33 @@ import * as moment from "moment"
 moment.locale("pt-br")
 
 
-type conta = {
-    name: string,
+type Usuario = {
+    nome: string,
     cpf: number,
+    dataNasc: number,
+    saldo: number,
+    extrato: any[]
 
 }
 
-type extrato = {
-    saldo: string,
-    gastos: string[]
+const conta: Usuario = {
+    nome: "Kaka",
+    cpf: 11111111111,
+    dataNasc: 3 / 5 / 88,
+    saldo: 0,
+    extrato: [],
+
 }
 
-const user: conta = {
-    name: "Kaka",
-    cpf: 30099988882,
+type Extrato = {
+    descrição: string,
+    valor: number,
+    data: number
 }
+
+const extrato: Extrato = {
+    descrição: "escola",
+    valor: 100,
+    data: 1 / 8 / 2020,
+}
+
